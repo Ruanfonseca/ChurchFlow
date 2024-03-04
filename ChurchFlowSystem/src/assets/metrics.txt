@@ -1,0 +1,26 @@
+1. Gestão de membros: Registração e controle de membros da igreja, incluindo informações pessoais,
+ histórico de participação e contribuições.
+
+2. Finanças: Contabilidade integrada para acompanhar doações, dízimos, despesas e relatórios financeiros.
+
+3. Agenda e eventos: Funcionalidades para programação e gestão de eventos, cultos, reuniões e atividades da igreja.
+
+4. Comunicação: Ferramentas para envio de mensagens, newsletters e comunicação interna para manter os membros informados.
+
+5. Gerenciamento de voluntários: Atribuição de responsabilidades, acompanhamento do serviço voluntário e gestão de equipes de trabalho.
+
+6. Educação religiosa: Recursos para organizar e gerenciar programas de ensino, estudos bíblicos e cursos.
+
+7. Controle de acessos: Gerenciamento de permissões de acesso para diferentes níveis de liderança e membros da igreja.
+
+8. Registro de sacramentos: Acompanhamento de batismos, casamentos, funerais e outros eventos sacramentais.
+
+9. Controle de ativos: Registro e monitoramento de ativos da igreja, como propriedades, equipamentos e recursos.
+
+10. Relatórios e análises: Geração de relatórios personalizados para avaliação do desempenho da igreja e tomada de decisões estratégicas.
+
+11. Gestão de doações online: Facilita a doação online, rastreamento automático de contribuições e geração de recibos.
+
+12. Transparência financeira: Garantia de transparência nas finanças da igreja, permitindo que os membros vejam como suas contribuições são utilizadas.
+
+Essas funcionalidades podem variar de acordo com as necessidades específicas da instituição religiosa e o software ERP escolhido.

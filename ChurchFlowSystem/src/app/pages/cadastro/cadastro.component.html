@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulário de Cadastro</title>
+  <link rel="stylesheet" href="cadastro.component.css">
+  <!-- Substitua pelo caminho do seu arquivo de estilos CSS -->
+</head>
+
+<body>
+
+  <div class="container_form">
+
+    <img class="LogoGesting" src="assets/logochurchflow.png">
+
+    <h3 class="title">Formulário de Cadastro</h3>
+
+    <form class="form">
+
+      <div class="form_group">
+        <label for="nome" class="form_label">Nome</label>
+        <input type="text"  [(ngModel)] = "usuario.name"  name="name" class="form_input" id="name" placeholder="Nome" required>
+      </div>
+
+      <div class="form_group">
+        <label for="e-mail" class="form_label">Email</label>
+        <input type="email" [(ngModel)] = "usuario.login" name="login" class="form_input" id="login" placeholder="seuemail@email.com" required>
+      </div>
+
+      <div class="form_group">
+        <label for="password" class="form_label">Senha</label>
+        <input type="password" [(ngModel)] = "usuario.password" name="password" class="form_input" id="password" required>
+      </div>
+
+
+      <br>
+
+<!--
+      <label for="picture" class="form_label "> Permissão</label>
+      <input type="text" class="form_input" [(ngModel)] = "usuario.role" name="role" required>
+-->
+    <div class="form_group">
+      <label for="password" class="form_label">Foto de perfil</label>
+      <input type="file" [(ngModel)]="usuario.picture" name="foto" id="foto"  class="form_input">
+
+    </div>
+
+<label for="role" class="form_label">Permissão</label>
+    <select class="form_input" [(ngModel)]="usuario.role" name="role" required>
+        <option *ngFor="let roleOption of roleOptions" [value]="roleOption">{{ roleOption }}</option>
+     </select>
+
+      <div class="submit">
+
+        <input type ="button" class="submit_btn responsive" (click)="cadastrar()" value="Cadastrar">
+
+        <a href="/" class="submit_btn responsive">Retornar</a>
+
+
+      </div>
+
+        <div class="menseagemRetorno"  *ngIf="retornoCadastro" [ngClass]="{'retorno-sucesso': retornoCadastro === 'success', 'retorno-erro': retornoCadastro !== 'success'}" id="">
+        {{ mensagemRetorno }}
+        </div>
+    </form>
+
+
+  </div><!-- container_form -->
+
+</body>
+
+</html>

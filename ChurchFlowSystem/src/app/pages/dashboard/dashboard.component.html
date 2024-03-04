@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Admin Dashboard</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="" />
+  <link rel="stylesheet" type="text/css" href="dashboard.component.css" />
+  <link rel="icon" href="favicon.ico">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Roboto&display=swap" rel="stylesheet">
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+</head>
+
+<body>
+  <div class="container">
+
+    <!--Sidebar-->
+    <aside class="sidebar">
+      <div id="dashboard"><span id="dashboard-icon" class="material-symbols-outlined">dashboard</span>&nbsp;Dashboard
+      </div>
+
+      <div id="links-main">
+        <a class="sidebar-links" href="#"><span
+            class="material-symbols-outlined sidebar-icons">home</span>&nbsp;&nbsp;Home</a>
+        <a class="sidebar-links" href="#"><span
+            class="material-symbols-outlined sidebar-icons">account_circle</span>&nbsp;&nbsp;Profile</a>
+        <a class="sidebar-links" href="#"><span
+            class="material-symbols-outlined sidebar-icons">chat</span>&nbsp;&nbsp;Messages</a>
+        <a class="sidebar-links" href="#"><span
+            class="material-symbols-outlined sidebar-icons">schedule</span>&nbsp;&nbsp;History</a>
+        <a class="sidebar-links" href="#"><span
+            class="material-symbols-outlined sidebar-icons">task</span>&nbsp;&nbsp;Tasks</a>
+        <a class="sidebar-links" href="#"><span
+            class="material-symbols-outlined sidebar-icons">groups</span>&nbsp;&nbsp;Communities</a>
+      </div>
+
+      <div id="links-support">
+        <a class="sidebar-links" href="#"><span
+            class="material-symbols-outlined sidebar-icons">settings</span>&nbsp;&nbsp;Settings</a>
+        <a class="sidebar-links" href="#"><span
+            class="material-symbols-outlined sidebar-icons">help</span>&nbsp;&nbsp;Support</a>
+        <a class="sidebar-links" href="#"><span
+            class="material-symbols-outlined sidebar-icons">lock</span>&nbsp;&nbsp;Privacy</a>
+      </div>
+    </aside>
+
+    <main class="main-container">
+
+      <!--Header-->
+      <header>
+        <div class="search">
+          <span id="search-icon" class="material-symbols-outlined">search</span>
+          <input class="search-bar" type="text">
+        </div>
+
+        <div class="account">
+          <span id="notifications-icon" class="material-symbols-outlined">notifications_active</span>
+          <img id="account-image" [src]="usuarioLogado?.picture" alt="">
+        <span id="account-name">{{ usuarioLogado?.name }}</span>
+
+        </div>
+
+        <div class="greeting">
+          <img id="greeting-image" src="assets/morgan.png" alt="">
+          <div id="greeting-name">
+            <div id="morgan"><span id="hithere">Hi there,</span><br><span id="hitheremorgan">Morgan Oakley
+                (morgan)</span></div>
+          </div>
+        </div>
+
+        <div class="header-buttons">
+          <button>New</button>
+          <button>Upload</button>
+          <button>Share</button>
+        </div>
+      </header>
+
+      <!--Projects-->
+      <div class="projects-container">
+        <div class="projects">
+          <span class="section-heading">Your projects</span>
+          <div class="cards-container">
+
+            <div class="cards">
+              <div class="card-text">
+                <h2>Super Cool Project</h2>
+                <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                  consequat.</p>
+              </div>
+              <div class="card-icons">
+                <span class="material-symbols-outlined card-icon">star</span>
+                <span class="material-symbols-outlined card-icon">visibility</span>
+                <span class="material-symbols-outlined card-icon">share</span>
+              </div>
+            </div>
+
+            <div class="cards">
+              <div class="card-text">
+                <h2>Less Cool Project</h2>
+                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
+                  totam rem aperiam,
+                  eaque ipsa quae ab illo inventore.</p>
+              </div>
+              <div class="card-icons">
+                <span class="material-symbols-outlined card-icon">star</span>
+                <span class="material-symbols-outlined card-icon">visibility</span>
+                <span class="material-symbols-outlined card-icon">share</span>
+              </div>
+            </div>
+
+            <div class="cards">
+              <div class="card-text">
+                <h2>Impossible App</h2>
+                <p>Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil
+                  impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda.</p>
+              </div>
+              <div class="card-icons">
+                <span class="material-symbols-outlined card-icon">star</span>
+                <span class="material-symbols-outlined card-icon">visibility</span>
+                <span class="material-symbols-outlined card-icon">share</span>
+              </div>
+            </div>
+
+            <div class="cards">
+              <div class="card-text">
+                <h2>Easy Peasy App</h2>
+                <p>Itaque earum rerum hic tenetur a sapiente delectus, ut aut
+                  reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus.</p>
+              </div>
+              <div class="card-icons">
+                <span class="material-symbols-outlined card-icon">star</span>
+                <span class="material-symbols-outlined card-icon">visibility</span>
+                <span class="material-symbols-outlined card-icon">share</span>
+              </div>
+            </div>
+
+            <div class="cards">
+              <div class="card-text">
+                <h2>Ad Blocker</h2>
+                <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit,
+                  sed quia consequuntur magni dolores eos qui.</p>
+              </div>
+              <div class="card-icons">
+                <span class="material-symbols-outlined card-icon">star</span>
+                <span class="material-symbols-outlined card-icon">visibility</span>
+                <span class="material-symbols-outlined card-icon">share</span>
+              </div>
+            </div>
+
+            <div class="cards">
+              <div class="card-text">
+                <h2>Money Maker</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+              </div>
+              <div class="card-icons">
+                <span class="material-symbols-outlined card-icon">star</span>
+                <span class="material-symbols-outlined card-icon">visibility</span>
+                <span class="material-symbols-outlined card-icon">share</span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!--Announcements-->
+        <div class="announcements-trending">
+
+          <div class="ann-container">
+            <span class="section-heading">Announcements</span>
+            <div class="announcements">
+              <div class="ann-one">
+                <span class="ann-heading">Site Maintenance</span>
+                <p class="ann-text">Duis aute irure dolor in voluptate velit esse cillum dolore eu fugiat reprehenderit
+                  in.</p>
+              </div>
+              <div class="ann-two">
+                <span class="ann-heading">Community Share Day</span>
+                <p class="ann-text">Et harum quidem rerum facilis est et expedita distinctio.</p>
+              </div>
+              <div class="ann-three">
+                <span class="ann-heading">Updated Privacy Policy</span>
+                <p class="ann-text">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium.</p>
+              </div>
+            </div>
+          </div>
+
+          <!--Trending-->
+          <div class="trending-container">
+            <span class="section-heading">Trending</span>
+            <div class="trending">
+
+              <div class="trending-one">
+                <img class="trending-image" src="assets/tegan.png" alt="">
+                <div class="trending-text">
+                  <h3>tegan</h3>
+                  <p>World Peace Builder</p>
+                </div>
+              </div>
+
+              <div class="trending-two">
+                <img class="trending-image" src="assets/morgan.png" alt="">
+                <div class="trending-text">
+                  <h3>morgan</h3>
+                  <p>Super Cool Project</p>
+                </div>
+              </div>
+
+              <div class="trending-three">
+                <img class="trending-image" src="assets/kendall.png" alt="">
+                <div class="trending-text">
+                  <h3>kendall</h3>
+                  <p>Life Changing App</p>
+                </div>
+              </div>
+
+              <div class="trending-four">
+                <img class="trending-image" src="assets/alex.png" alt="">
+                <div class="trending-text">
+                  <h3>alex</h3>
+                  <p>No Traffic Maker</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <footer>Gesting System&nbsp;<a href="" target="_blank"><i
+            class="fa-brands fa-github"></i></a></footer>
+    </main>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulário de Recuperação de senha</title>
+  <link rel="stylesheet" href="secundary.component.css">
+  <!-- Substitua pelo caminho do seu arquivo de estilos CSS -->
+</head>
+
+<body>
+
+  <div class="container_form">
+
+    <img class="LogoGesting" src="assets/logochurchflow.png">
+
+    <h3 class="titleForgot">Preencha com seu email</h3>
+
+    <form class="form">
+
+      <div class="form_group">
+        <label for="email" class="form_label">Email</label>
+        <input type="email" [(ngModel)]="secundaryRecuperationdto.login" name="loginRecuperation" class="form_input"
+          id="loginRecuperation" placeholder="" required>
+      </div>
+      <div class="form_group">
+        <label for="text" class="form_label">Nova Senha</label>
+        <input type="text" [(ngModel)]="secundaryRecuperationdto.newPassword" name="novasenha" class="form_input" id="novasenha"
+          placeholder="" required>
+      </div>
+      <div class="form_group">
+        <label for="text" class="form_label">Confirmar Senha</label>
+        <input type="text" [(ngModel)]="secundaryRecuperationdto.confirmPassword" name="confirmasenha" class="form_input" id="confirmasenha"
+          placeholder="" required>
+      </div>
+
+      <div class="submit">
+
+
+        <button type="submit" (click)="onRecuperacaoSecundary()" name="Submit" class="submit_btn responsive">Enviar</button>
+        <a href="/" class="submit_btn responsive">Retornar</a>
+      </div>
+    </form>
+
+    <div class="menseagemRetorno" *ngIf="retornoCadastro"
+      [ngClass]="{'retorno-sucesso': retornoCadastro === 'success', 'retorno-erro': retornoCadastro !== 'success'}"
+      id="">
+      {{ mensagemRetorno }}
+    </div>
+
+  </div><!-- container_form -->
+
+</body>
+
+</html>
